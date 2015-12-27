@@ -1,0 +1,131 @@
+
+\documentclass[12pt, a4paper]{article}
+\usepackage{geometry}
+\pagestyle{empty}
+\geometry{left=2.3cm, right=2.3cm, top=2.5cm, bottom=2.5cm}
+\RequirePackage{titlesec}
+\titleformat{\subsection}
+ {\large\sffamily\raggedright}
+ {}{0em}
+ {}
+\titleformat{\section}
+ {\Large\scshape\raggedright}
+ {}{0em}
+ {}
+ [\titlerule]
+ \usepackage{xcolor}
+ \definecolor{allc}{RGB}{0,102,0}
+\usepackage[pdftex,  %pdflatex,pdftex这里决定运行文件的方式不同
+            pdfstartview=FitH,
+            CJKbookmarks=true,
+            bookmarksnumbered=true,
+            bookmarksopen=true,
+            colorlinks, %注释掉此项则交叉引用为彩色边框(将colorlinks和pdfborder同时注释掉)
+            pdfborder=001,   %注释掉此项则交叉引用为彩色边框
+            allcolors=allc,
+            ]{hyperref}
+
+\renewcommand{\familydefault}{\rmdefault}
+
+\newcommand{\datedsection}[2]{%
+ \section[#1]{#1 \hfill #2}%
+}
+\newcommand{\datedsubsection}[2]{%
+ \subsection[#1]{#1 \hfill #2}%
+}
+
+\thispagestyle{empty}
+\renewcommand{\datedsubsection}[2]{ %
+ \subsection[#1]{#1 \hfill #2}%
+}
+
+\newcommand*{\doi}[1]{\href{http://dx.doi.org/#1}{\ttfamily doi:#1}}
+
+
+
+\linespread{1.1}\selectfont
+\usepackage{calc}
+\begin{document}
+
+\noindent\textbf{\Large Tao Wang}
+\\[9pt]
+{\fontfamily{lmodern}
+\textbf{\it TEL: (+86)18511759970}\quad
+\textbf{\it Email: monadic.io@gmail.com}}
+
+
+\vspace{3ex}
+\par\hbox{\textbf{\large EDUCATION}}\kern3pt\hrule height 1pt\kern-15pt
+\datedsubsection{Northeastern University (CN)}{2010.9 - 2014.6}
+{\it Bachelor of Software Engineering}\\
+
+\vspace{0.5ex}
+\par\hbox{\textbf {\large SKILLS}}\kern3pt\hrule height 1pt\kern3pt
+
+\begin{description}
+  \item[Programming Languages] \hfill \\
+  \it{
+   C $,$ Java $,$ Clojure $,$ Ruby $,$ Node $,$ Perl
+   }
+  \item[Techniques] \hfill \\
+  \it{
+   Nginx , Mysql ,Thrift , Kafka, RabbitMQ ,Redis
+   }
+  \item[System administration] \hfill \\
+  \it{
+   Have almost 5 year experice with *nix.Familar with console world.}
+  \item[Front end] \hfill \\
+  \it{
+  Using Angularjs for internal use. Familar with Css selector for using webdrive to wirte some autotest. }
+  \item[Other skills] \hfill \\
+ \it{ Java Virtual Machine, Version control systems, Regurlar Exprestion,Parser,Scripting }
+ \end{description}
+
+\vspace{0.5ex}
+\par\hbox{\textbf {\large EXPRIENCES}}\kern3pt\hrule height 1pt\kern-15pt
+
+\datedsubsection{\sffamily Zrcaifu Inc:  Research and Development Engineer}{2014.12 - Present}
+{\it Designed and implemented a trading system,  the system is the core part of the Internet financial system, including investment, making loans, repayment splits. The trading system is still in use now, so far there have been the transaction amount of 3 billion yuan, which is very robust. Mainly used Clojure.}
+\\
+ 
+
+\noindent{\it Spented four months' time in design and implementation of the trading system of a credits (similar to the a secondary market of investment),  till now the transaction amount of over 10 million yuan.
+}
+\\
+\vspace{.5ex}
+
+\noindent{\it Refactor payment callback server with state machine based dispatch.}
+\\[-15pt]
+
+\datedsubsection{QUNAR Inc: Research and Development Engineer}{2014.2 - 2014.11}
+
+
+{\it Participate in migrate old trasaction system (mainly wireless part) from PHP to Java.}\\
+
+\noindent{\it
+Participate in splitting the old entrance server into microservice.}\\
+
+\noindent{\it
+Optimize generate order list data using guava.}\\
+
+\vspace{.5ex}
+
+\par\hbox{\textbf {\large ARCHIVEMENTS}}\kern3pt\hrule height 1pt\kern3pt
+\vspace{.5ex}
+
+\noindent
+\it{Two paper published during the undergraduate period.}\\
+\vspace{.5ex}
+
+\noindent{A Fast Chaos-Based Symmetric Image Cipher with a Novel Bit-Level Permutation Strategy\\
+\doi{10.1007/978-3-319-03584-0\_5}\\}
+
+\vspace{.5ex}
+\noindent{
+A Symmetric Image Encryption Scheme Using Chaotic Baker map and Lorenz System.\\
+\doi{10.1109/CIS.2013.158}\\}
+
+
+
+
+\end{document}
